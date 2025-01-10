@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center">
       <p className="mb-12 text-center">
-        私はフルスタックエンジニアです/Udemy講師として活動しています/好きな言語はjavascriptです
+        私はNext.jsエンジニアです/Udemy講師として活動しています/好きな言語はjavascriptです
       </p>
       <section>
         <h2 className="text-center text-2xl font-bold mb-8">📝エンジニアのブログ</h2>
