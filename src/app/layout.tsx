@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { headers } from 'next/headers';
 import "./globals.css";
 
-const name = "Next.js Blog";
+const name = "Gezi Blog";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,8 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "My Blog",
-  description: "My Blog",
+  title: "Gezi Blog",
+  description: "副業とAIについての情報を発信しています",
+  icons: {
+    icon: '/favicon.ico',
+  },
 };
 
 export default async function RootLayout({
@@ -34,28 +37,30 @@ export default async function RootLayout({
   return (
     <html lang="ja">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
-        <header className="flex flex-col items-center gap-6 pt-12 pb-4">
-          <Image
-            src="/images/profile.png"
-            alt="プロフィール画像"
-            width={isHome ? 80 : 50}
-            height={isHome ? 80 : 50}
-            className="rounded-full"
-          />
-          <h1 className={`font-bold ${isHome ? 'text-4xl' : 'text-2xl'}`}>{name}</h1>
-        </header>
-        <main className="flex flex-col items-center justify-center h-screen">
-          {children}
-        </main>
-        {!isHome && (
-          <div className="text-center mt-8">
-            <Link href="/" className="text-blue-500 hover:text-blue-700">
-              ← ホームへ戻る
-            </Link>
-          </div>
-        )}
+        <div className="max-w-4xl mx-auto px-4">
+          <header className="flex flex-col items-center gap-6 pt-12 pb-4">
+            <Image
+              src="/images/profile.png"
+              alt="プロフィール画像"
+              width={isHome ? 80 : 50}
+              height={isHome ? 80 : 50}
+              className="rounded-full"
+            />
+            <h1 className={`font-bold ${isHome ? 'text-4xl' : 'text-2xl'}`}>{name}</h1>
+          </header>
+          <main className="flex flex-col items-center justify-center min-h-0 py-8">
+            {children}
+          </main>
+          {!isHome && (
+            <div className="text-center mt-8 mb-8">
+              <Link href="/" className="text-blue-500 hover:text-blue-700">
+                ← ホームへ戻る
+              </Link>
+            </div>
+          )}
+        </div>
       </body>
     </html>
   );

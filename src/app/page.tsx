@@ -8,10 +8,10 @@ export default async function Home() {
   return (
     <div className="flex flex-col items-center">
       <p className="mb-12 text-center">
-        私はNext.jsエンジニアです/Udemy講師として活動しています/好きな言語はjavascriptです
+        私は駆け出しエンジニアです/Next.jsでブログサイトを作成してみました/副業についての情報を発信していきます
       </p>
       <section>
-        <h2 className="text-center text-2xl font-bold mb-8">📝エンジニアのブログ</h2>
+        <h2 className="text-center text-2xl font-bold mb-8">📝  副業のブログ</h2>
         <div className="grid grid-cols-2 gap-8 mt-4">
           {posts.map((post) => (
             <article key={post.id} className="flex flex-col gap-2">
