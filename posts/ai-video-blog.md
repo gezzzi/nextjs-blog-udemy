@@ -1,6 +1,6 @@
 ---
 title: "AI動画投稿の始め方：初心者向け完全ガイド"
-thumbnail: "/images/side-job.webp"
+thumbnail: "/images/ai-movie-create.webp"
 date: "2025-01-14"
 ---
 
