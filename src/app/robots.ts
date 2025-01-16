@@ -4,6 +4,6 @@ export default function robots() {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://your-domain.com/sitemap.xml', // あなたのドメインに変更してください
+    sitemap: 'https://www.techstepsite.com/sitemap.xml',
   };
 } 
