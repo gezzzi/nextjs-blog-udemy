@@ -53,9 +53,9 @@ export default async function Post({
     return (
       <article className="max-w-2xl mx-auto p-4">
         <h1 className="text-3xl font-bold mb-4">{post.title}</h1>
-        <div className="text-gray-500 mb-8">{post.date}</div>
+        <div className="text-gray-500 dark:text-gray-100 mb-8">{post.date}</div>
         <div 
-          className="prose max-w-none"
+          className="prose dark:prose-invert max-w-none"
           dangerouslySetInnerHTML={{ __html: post.contentHtml }}
         />
       </article>

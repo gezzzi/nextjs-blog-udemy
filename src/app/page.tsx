@@ -27,7 +27,7 @@ export default async function Home() {
               <Link href={`/posts/${post.id}`} className="font-medium hover:underline">
                 {post.title}
               </Link>
-              <small className="text-gray-500">{post.date}</small>
+              <small className="text-gray-500 dark:text-gray-100">{post.date}</small>
             </article>
           ))}
         </div>
